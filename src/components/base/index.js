@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -25,8 +25,12 @@ function BaseToast({
   text2Style,
   activeOpacity,
   text1NumberOfLines,
-  text2NumberOfLines
+  text2NumberOfLines,
+  onShow
 }) {
+		useEffect(() => {
+		onShow&&onShow()
+	}, [text1,text2])
   return (
     <TouchableOpacity
       testID='rootView'

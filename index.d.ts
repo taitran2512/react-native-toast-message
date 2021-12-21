@@ -26,7 +26,8 @@ declare module 'react-native-toast-message' {
     text2Style?: TextStyle,
     activeOpacity?: number,
     text1NumberOfLines: number,
-    text2NumberOfLines: number,
+	  text2NumberOfLines: number,
+	   onShow?: () => void,
   }
   export const BaseToast: React.FC<BaseToastProps>
 
